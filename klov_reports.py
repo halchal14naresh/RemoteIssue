@@ -10,34 +10,18 @@ class Reports:
     reports = None
 
     def __init__(self, projectName, reportName, mongoDbHost, mongoDbPort, klovServerAddress):
-
-
-
-
-
-        #self.classpath = "F:/AllPythonProjects/PDS_Framwork/Reports/TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
-        self.classpath = "F:/EclipseWorkSpace/TestProject/target/TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
-
+        # self.classpath = "F:/EclipseWorkSpace/TestProject/target/TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
+        self.classpath = "TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
         jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', "-Djava.class.path=" + self.classpath)
         print("Step 1 *******")
         jpype.java.lang.System.out.println("hello world")
         extent_report = JPackage('com').reports
         print("Step 2 *******", extent_report, type(extent_report))
-        #print(jpype.isThreadAttachedToJVM())
-        #jpype.attachThreadToJVM()
-        #print(jpype.isThreadAttachedToJVM())
         self.reports = extent_report.ExtentReportFunctions(projectName, reportName, mongoDbHost, mongoDbPort,
                                                            klovServerAddress)
         print("Step 3 *******")
         self.reports.initExtentReport()
-
         print("Step 4 *******")
-
-
-
-
-
-
 
     def add_system_info(self, os, env, user):
         self.reports.systemInfo(os, env, user)
