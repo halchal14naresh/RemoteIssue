@@ -11,7 +11,7 @@ class Reports:
 
     def __init__(self, projectName, reportName, mongoDbHost, mongoDbPort, klovServerAddress):
         # self.classpath = "F:/EclipseWorkSpace/TestProject/target/TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
-        self.classpath = "TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
+        self.classpath = "abcd.jar"
         jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', "-Djava.class.path=" + self.classpath)
         print("Step 1 *******")
         jpype.java.lang.System.out.println("   ")
