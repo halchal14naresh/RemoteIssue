@@ -14,7 +14,7 @@ class Reports:
         self.classpath = "TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
         jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', "-Djava.class.path=" + self.classpath)
         print("Step 1 *******")
-        jpype.java.lang.System.out.println("hello world")
+        jpype.java.lang.System.out.println("hello world NKY")
         extent_report = JPackage('com').reports
         print("Step 2 *******", extent_report, type(extent_report))
         self.reports = extent_report.ExtentReportFunctions(projectName, reportName, mongoDbHost, mongoDbPort,
