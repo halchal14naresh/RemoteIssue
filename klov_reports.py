@@ -14,11 +14,18 @@ class Reports:
         self.classpath = "TestProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
         jpype.startJVM(jpype.getDefaultJVMPath(), '-ea', "-Djava.class.path=" + self.classpath)
         print("Step 1 *******")
+        jpype.java.lang.System.out.println("   ")
+        jpype.java.lang.System.out.println("   ")
         jpype.java.lang.System.out.println("hello world NKY")
+        jpype.java.lang.System.out.println("   ")
+        jpype.java.lang.System.out.println("Why this is running first ??   ")
+
         extent_report = JPackage('com').reports
         print("Step 2 *******", extent_report, type(extent_report))
         self.reports = extent_report.ExtentReportFunctions(projectName, reportName, mongoDbHost, mongoDbPort,
                                                            klovServerAddress)
+        print("self.reports  "  ,self.reports)
+        print("type of nky ", type(self.reports))
         print("Step 3 *******")
         self.reports.initExtentReport()
         print("Step 4 *******")
