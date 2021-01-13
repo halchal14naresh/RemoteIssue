@@ -20,15 +20,15 @@ class Reports:
         jpype.java.lang.System.out.println("   ")
         jpype.java.lang.System.out.println("Why this is running first ??   ")
 
-        # extent_report = JPackage('com').reports
-        # print("Step 2 *******", extent_report, type(extent_report))
-        # self.reports = extent_report.ExtentReportFunctions(projectName, reportName, mongoDbHost, mongoDbPort,
-        #                                                    klovServerAddress)
-        # print("self.reports  "  ,self.reports)
-        # print("type of nky ", type(self.reports))
-        # print("Step 3 *******")
-        # self.reports.initExtentReport()
-        # print("Step 4 *******")
+        extent_report = JPackage('com').reports
+        print("Step 2 *******", extent_report, type(extent_report))
+        self.reports = extent_report.ExtentReportFunctions(projectName, reportName, mongoDbHost, mongoDbPort,
+                                                           klovServerAddress)
+        print("self.reports  ", self.reports)
+        print("type of nky ", type(self.reports))
+        print("Step 3 *******")
+        self.reports.initExtentReport()
+        print("Step 4 *******")
 
     def add_system_info(self, os, env, user):
         self.reports.systemInfo(os, env, user)
