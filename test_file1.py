@@ -11,7 +11,7 @@ class TestClass1:
         print("********************** ")
         print(" ")
 
-        obj = Reports("PythonTestProject", "MyPythonReport", "172.29.3.68", 27017, "http://172.29.3.68:8443")
+        obj = Reports("PythonTestProject", "MyPythonReport", "192.168.0.102", 27017, "http://192.168.0.102:8443")
         # obj.init_extent_test("TC0014")
         # obj.add_system_info("Window 10 Pro", "QA ", "NARESH KUMAR")
         # obj.testcase_result("Pass", "", "")
