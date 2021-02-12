@@ -1,17 +1,17 @@
 kind: pipeline
 name: default
 
-# http://www.extentreports.com/docs/versions/5/klov/index.html
+#http://www.extentreports.com/docs/versions/5/klov/index.html
 
-version: '2'
-services:
-    klov:
-        image: anshooarora/klov:1.0.1
-        container_name: klov
-        environment:
-            - SPRING_DATA_MONGODB_URI=mongodb://172.29.1.77:27017
-        ports:
-            - 80:80
+#version: '2'
+#services:
+#    klov:
+#        image: anshooarora/klov:1.0.1
+#        container_name: klov
+#        environment:
+#            - SPRING_DATA_MONGODB_URI=mongodb://172.29.1.77:27017
+#        ports:
+#            - 80:80
 
 
 
