@@ -16,7 +16,7 @@ name: default
 
 
 steps:
-- name: Python&JavaforremoteIssue14
+- name: Python&JavaforremoteIssue1
   image: carvk/java_python:openjdk15_python38
   network_mode: host
   commands:
