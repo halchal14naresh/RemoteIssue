@@ -1,4 +1,5 @@
 import os
+import pprint
 
 from klov_reports import Reports
 
@@ -23,6 +24,7 @@ class TestClass1:
 
         print("This is Just Test Method Do Code Change abcd")
         env_var = os.environ
-        print(os.environ['sky'])
-        print(os.environ['M3_HOME'])
-        print(os.environ['nky'])
+        # print(os.environ['sky'])
+        # print(os.environ['M3_HOME'])
+        # print(os.environ['nky'])
+        pprint.pprint(dict(env_var), width=1)
