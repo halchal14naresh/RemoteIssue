@@ -22,7 +22,7 @@ class TestClass1:
         # obj.flush_report()
         # obj.shutdown_JVM()
 
-        print("This is Just Test Method Do Code Change abcd")
+        print("This is My Env Varibles")
         env_var = os.environ
         # print(os.environ['sky'])
         # print(os.environ['M3_HOME'])
